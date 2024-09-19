@@ -10,7 +10,11 @@ if(empty($name)||empty($surn)||empty($mail)||empty($pass)){
     echo"musisz wypelnić pola!!";
 }else{
 
+<<<<<<< HEAD
 $pass_hash=md5($pass.PASS_SALT);
+=======
+
+>>>>>>> a2c9d9fe94894ad4301337baebd8aeb0411ad87f
 $dodanie="INSERT INTO users(id,user_name,user_surname,user_email,user_password,user_active) VALUES (NULL,'$name','$surn','$mail','$pass',0)";
 //$dodanie="INSERT INTO users(id,user_name,user_surname,user_email,user_password,user_active) VALUES (NULL,'test2','test2','test2','test2',0)";
 if($db->query($dodanie)){

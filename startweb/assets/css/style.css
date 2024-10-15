@@ -86,3 +86,11 @@ input
 {
 	text-align: center;;
 }
+.show{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background-color: blueviolet;
+	border: 2px solid black;
+	left: 100%;
+}

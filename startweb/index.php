@@ -40,6 +40,7 @@ if(!empty($_POST))
 		<section>
 			<h1 class="align-center">Formularz rejestracji użytkownika</h1>
 			<?php include ('templates/form.html.php'); ?>
+			
 		</section>
 	</body>
 </html>

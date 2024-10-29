@@ -14,13 +14,17 @@
 				<?php
 					$page = isset($_GET['page']) ? $_GET['page'] : 'index';
 					$action = isset($_GET['action']) ? $_GET['action']: 'index';
-					if (is_file($file = 'templates/views' . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . $action . '.php'))
-					{
-						include ($file);
+					if(is_file($actionFile="actions".DIRECTORY_SEPARATOR.$page.DIRECTORY_SEPARATOR.$action.'Action.php')){
+						include($actionFile);
+						if (is_file($file = 'templates/views' . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . $action . '.php'))
+						{
+							include ($file);
+						}
 					}
 					else
 					{
-						die('Forget about it');
+						//die('Forget about it');
+						throw new Exception ('Cannot include file: ' . $actionFile);
 					}
 					//exit;
 				?>

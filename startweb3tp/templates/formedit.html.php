@@ -1,15 +1,15 @@
 <div class="container">
     <?php if ($isError): displayErrors(); endif; ?>
-    <h1 class="align-center">Formularz rejestracji użytkownika</h1>
+    <h1 class="align-center">Formularz edytcji użytkownika</h1>
     <div class="form">
-        <form action="index.php?page=index&action=add" method="post">
+        <form action="index.php?page=index&action=edit" method="post">
             <div class="mb-4">
                 <label class="form-label" for="name">Imię</label>
-                <input id="name" class="form-control" type="text" name="name" placeholder="Imię" value="<?php if(isset($form['name']) && $isError): echo $form['name']; endif; ?>" require>
+                <input id="name" class="form-control" type="text" name="name" placeholder="name" value="<?php if(isset($form['name']) && $isError): echo $form['name']; endif; ?>" require>
             </div>
             <div class="mb-4">
                 <label class="form-label" for="surname">Nazwisko</label>
-                <input class="form-control" type="text" name="surname" placeholder="Nazwisko" value="<?php if(isset($form['surname']) && $isError): echo $form['surname']; endif; ?>" require/>
+                <input class="form-control" type="text" name="surname" placeholder="Surname" value="<?php if(isset($form['surname']) && $isError): echo $form['surname']; endif; ?>" require/>
             </div>
             <!--<div class="mb-4">
                 <label class="form-label" for="birth-date">Data urodzenia</label>

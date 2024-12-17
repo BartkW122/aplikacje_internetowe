@@ -11,7 +11,7 @@
 	<body>
 		<nav class="navbar navbar-light bg-light">
 			<div class="container-fluid">
-				<span class="navbar-brand mb-0 h1" style="color:black;"><?php echo $_SESSION['user']['name']?></span>
+				<span class="navbar-brand mb-0 h1" style="color:black;"><?php echo "Wiatj " .",". $_SESSION['user']['name']?></span>
 				<a class="nav-link" href="logout.php">Wyloguj</a>
 			</div>
 		</nav>

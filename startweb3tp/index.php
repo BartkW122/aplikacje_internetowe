@@ -8,7 +8,7 @@ require('app/config/db.php');
 require('app/functions/validate.function.php');
 require('app/functions/helper.function.php');
 
-if (isset($_SESSION['user']))
+if (!isset($_SESSION['user']))
 {
     include ('templates/MasterPage.html.php');
 }

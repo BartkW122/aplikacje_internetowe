@@ -42,7 +42,7 @@
 					$action = isset($_GET['action']) ? $_GET['action']: 'index';
 					echo"page: ". $page."<br>";
 					echo"action: ". $action."<br>";
-					if (is_file($actionFile = 'actions' . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . $action . 'Action.php'))
+					if (is_file($actionFile = 'actions' . DIRECTORY_SEPARATOR . 'users' . DIRECTORY_SEPARATOR . $action . 'Action.php'))
 					{
 						
 						include ($actionFile);

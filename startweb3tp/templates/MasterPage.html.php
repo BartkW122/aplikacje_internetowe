@@ -40,8 +40,7 @@
 
 					$page = isset($_GET['page']) ? $_GET['page'] : 'index';
 					$action = isset($_GET['action']) ? $_GET['action']: 'index';
-					echo"page: ". $page."<br>";
-					echo"action: ". $action."<br>";
+					
 					if (is_file($actionFile = 'actions' . DIRECTORY_SEPARATOR . 'users' . DIRECTORY_SEPARATOR . $action . 'Action.php'))
 					{
 						
@@ -50,8 +49,6 @@
 						if (is_file($viewFile = 'templates/views' . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . $action . '.php'))
 						{
 							include ($viewFile);
-							echo"viewfille: ". $viewFile."<br>";
-							echo"actionfille: ". $actionFile;
 						}						
 					}
 					else

@@ -18,19 +18,7 @@
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-							<li class="nav-item">
-								<a class="nav-link active" href="?page=index">Pulpit</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="?page=users">Użytkownicy</a>
-							</li>
-						</ul>
-						<ul class="navbar-nav d-flex">
-							<li class="nav-item">
-								<a class="nav-link" href="logout.php">Wyloguj</a>
-							</li>
-						</ul>
+						<?php include('menu.html.php')?>
 					</div>
 				</div>
 			</nav>

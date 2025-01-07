@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     if (!empty($_POST['email']) && !empty($_POST['password']))
     {
         $password = md5(PASS_SALT . $_POST['password']);
-        $sql = "SELECT id, user_name FROM users WHERE user_email = '{$_POST['email']}' AND user_password = '$password' AND active = 1";        
+        $sql = "SELECT id, user_name FROM users WHERE user_email = '{$_POST['email']}' AND user_password = '$password'";        
         $res = $db->query($sql);
         $user = $res->fetch_assoc();
         if (!empty($user))

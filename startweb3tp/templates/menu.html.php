@@ -1,7 +1,7 @@
 <?php
     require('menu.php');
 ?>
-<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<!--<ul class="navbar-nav me-auto mb-2 mb-lg-0">
     <li class="nav-item">
         <a class="nav-link active" href="?page=<?php echo $menu['Dashboard']['page']; ?>"><?php echo $menu['Dashboard']['name'];?></a>
     </li>
@@ -12,8 +12,9 @@
     <ul class="navbar-nav d-flex">
     <li class="nav-item">
         <a class="nav-link" href="logout.php">Wyloguj</a>
-    </li>
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+</li>-->
+
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
     <?php foreach ($menu as $element): ?>
         <?php if (isset($element['actions']) && is_array($element['actions'])): ?>
             <li class="nav-item dropdown">
@@ -21,15 +22,15 @@
                     <ul class="dropdown-menu">
                         <?php foreach ($element['actions'] as $action): ?>
                             <li>
-                            <a class="dropdown-item" href="?page=<?php echo $element['page']; ?>&action=<?php echo $action['action']; ?>">Action</a>
+                                <a class="dropdown-item" href="?page=<?php echo $element['page']; ?>&action=<?php echo $action['action']; ?>">Action</a>
                             </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </li>
-                <?php else: ?>
+                        <?php endforeach; ?>
+                    </ul>
+                </li>
+            <?php else: ?> 
             <li class="nav-item">
                 <a class="nav-link active" href="?page=<?php echo $element['page']; ?>"><?php echo $element['name']; ?></a>
-            </li>
+            </li> 
         <?php endif; ?>
     <?php endforeach; ?>
 </ul>

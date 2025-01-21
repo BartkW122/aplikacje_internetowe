@@ -1,0 +1,30 @@
+<?php
+
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+    fieldRequired('file', $_POST['plik']);
+	fieldRequired('autor', $_POST['autor']);
+	fieldRequired('tytul', $_POST['name']);
+    fieldRequired('tersc', $_POST['tresc']);
+
+
+	if (!$isError)
+	{	
+		/* status Bool(true|false), msg String) */
+		$dbStatus = [];
+		
+		$query = "INSERT INTO news SET news_filename = '{$_POST['plik']}', news_title = '{$_POST['name']}', news_author = '{$_POST['autor']}', news_content = '{$_POST['tresc']}'";
+        if ($db->query($query))
+        {
+            $_SESSION['message']['success'] = 'Data has been saved successfully';
+        }
+        else
+        {
+            $_SESSION['message']['warning'] = 'Data has not been saved!';
+        }
+	}
+	else
+	{
+		$form = $_POST;
+	}
+}

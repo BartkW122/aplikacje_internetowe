@@ -1,8 +1,6 @@
 <?php
     $formAction = "index.php?page=index&action=";
     $formAction .= isset($_GET['id']) ? 'edit&id=' . $_GET['id'] : 'add';
-    echo "id: ".$_GET['id']."<br>";
-    echo "formaction: ".$formAction;
    /* if (isset($dbStatus['status']))
     {
         showMessage($dbStatus['status'], $dbStatus['msg']);

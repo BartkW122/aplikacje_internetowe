@@ -17,10 +17,13 @@
 				<?php
 					$page = isset($_GET['page']) ? $_GET['page'] : 'index';
 					$action = isset($_GET['action']) ? $_GET['action']: 'index';
+					echo $page."<br>";
+					echo $action."<br>";
 					if (is_file($actionFile = 'actions' . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . $action . 'Action.php'))
-					{
+					{	
 						include ($actionFile);
 						include ('templates/messages.html.php');
+						echo $actionFile."<br>";
 						if (is_file($viewFile = 'templates/views' . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . $action . '.php'))
 						{
 							include ($viewFile);

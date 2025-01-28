@@ -1,3 +1,12 @@
+<?php
+    $formAction = "index.php?page=index&action=";
+    $formAction .= isset($_GET['id']) ? 'edit&id=' . $_GET['id'] : 'add';
+   /* if (isset($dbStatus['status']))
+    {
+        showMessage($dbStatus['status'], $dbStatus['msg']);
+    }
+    */
+?>
 <div class="container">
     <?php if ($isError): displayErrors(); endif; ?>
     <h1 class="align-center">Formularz dodawania użytkownika</h1>

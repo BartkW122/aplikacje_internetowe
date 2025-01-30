@@ -1,5 +1,5 @@
 <?php
-    $formAction = "index.php?page=index&action=";
+    $formAction = "index.php?page=news&action=";
     $formAction .= isset($_GET['id']) ? 'edit&id=' . $_GET['id'] : 'add';
    /* if (isset($dbStatus['status']))
     {

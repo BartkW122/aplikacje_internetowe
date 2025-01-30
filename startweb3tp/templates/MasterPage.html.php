@@ -27,7 +27,8 @@
 						if (is_file($viewFile = 'templates/views' . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . $action . '.php'))
 						{
 							include ($viewFile);
-						}						
+						}
+						echo $viewFile;						
 					}
 					else
 					{
